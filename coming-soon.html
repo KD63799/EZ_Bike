@@ -4,22 +4,30 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Coming Soon</title>
-  <link rel="stylesheet" href="coming-soon.css">
+  <link rel="stylesheet" href="assets/css/coming-soon.css">
+  <style>
+    body {
+      background-image: url('assets/svg/bubbles.svg');
+      background-size: cover;
+      background-position: center;
+    }
+  </style>
 </head>
 <body>
+<img src="assets/svg/feuille.svg" alt="feuille">
   <div class="container">
     <h1 id="title">Coming Soon</h1>
-    <img src="bike-red.svg" alt="">
-    <p id="message">La fonctionnalité de recherche de vélib est en cours de développement.
-        <br>Elle arrivera le 1er Aout 2024</p>
+    <img src="assets/svg/bike-red.svg" alt="velo rouge">
+    <p id="message">La fonctionnalité de recherche de vélib est en cours de développement
+        <br>Elle arrivera le 1er Aout 2024 à 12 h 00</p>
     <div class="countdown-container">
         <div class="rectangle" id="days"></div>
         <div class="rectangle" id="hours"></div>
         <div class="rectangle" id="minutes"></div>
         <div class="rectangle" id="seconds"></div>
     </div>
-   <img src="tige.svg" alt="" >
   </div>
-  <script src="Soon.js"></script>
+   <img src="assets/svg/tige.svg" alt="feuille">
+  <script src="assets/js/Soon.js"></script>
 </body>
 </html>
