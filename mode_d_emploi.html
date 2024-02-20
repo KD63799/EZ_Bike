@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mode d'emploi</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/mode_d_emploi.css">
 </head>
 
 <body>
@@ -14,35 +14,41 @@
         <h1>Comment ça marche ?</h1>
     </div>
 
-    <div class="main">
+    <div class="maincontainer">
 
-        <div class="card">
-            <div class="content">
-                <img src="icon-windows.jpg" alt="" title="" />
-                <h3>1. Amet consectetu</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, necessitatibus.</p>
+       
+        <div class="carousel">
+
+            <div class="card">
+                <div class="content">
+                    <img src="assets/jpg/icon-windows.jpg" alt="" title="" />
+                    <h3>1. Amet consectetu</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, necessitatibus.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="content">
+                    <img src="assets/jpg/icon-documents.jpg" alt="" title="" />
+                    <h3>2. Voluptatibus ducimus</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, necessitatibus.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="content">
+                    <img src="assets/jpg/icon-idea.jpg" alt="" title="" />
+                    <h3>3. Iste aspernatur</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, necessitatibus.</p>
+                </div>
             </div>
         </div>
-
-        <div class="card">
-            <div class="content">
-                <img src="icon-documents.jpg" alt="" title="" />
-                <h3>2. Voluptatibus ducimus</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, necessitatibus.</p>
-            </div>
+        <div class="buttons">
+            <button id="prevBtn"><i class="arrow"></i></button>
+            <button id="nextBtn"><i class="arrow"></i></button>
         </div>
-
-        <div class="card">
-            <div class="content">
-                <img src="icon-idea.jpg" alt="" title="" />
-                <h3>3. Iste aspernatur</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, necessitatibus.</p>
-            </div>
-        </div>
-
-
-
     </div>
+   
 
     <footer>
         <hr>
@@ -59,13 +65,10 @@
                 <a href="#">Contact</a>
             </div>
 
-            <div class="button">
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
-        </div>
+
         </div>
     </footer>
-
+    <script src="assets/js/mode_d_emploi.js"></script>
 </body>
 
 </html>
