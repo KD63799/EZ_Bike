@@ -1,48 +1,51 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
 
-}
 
 .container {
     max-width: 800px;
     margin: 50px auto;
-    text-align: center;
+    text-align: left;
+
+  
 }
 
-h1 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-}
 
 .search-label {
     display: block;
-    font-size: 1.2rem;
+    font-size: 25px;
     margin-top: 20px;
+    color: #009961;
 }
+
 
 .search-input {
     width: 100%;
     padding: 10px;
-    font-size: 1rem;
+    font-size: 15px;
     margin-top: 10px;
-    box-sizing: border-box;
+    border-color: #009961;
+    border-radius: 10px;
+    color: #009961;
+   
+   
 }
 
 @media screen and (max-width: 768px) {
-    h1 {
-        font-size: 2rem;
+    .search-label{
+        font-size: 20px;
+    
     }
 }
 
 @media screen and (max-width: 480px) {
-    h1 {
-        font-size: 1.8rem;
+    .search-label{
+        font-size: 15px;
+      
+       
     }
 }
+
  #map { 
    
-    height: 180px;
+    height: 500px;
  
 }

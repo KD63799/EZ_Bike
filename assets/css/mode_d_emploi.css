@@ -12,6 +12,13 @@ body {
   background-color: #fff;
 }
 
+/* Cache la partie mobile sans le carousel */
+.mobile {
+  display: none;
+}
+.desk{
+  display: block;
+}
 /* TITLE */
 
 .title h1 {
@@ -27,7 +34,7 @@ body {
 }
 /* CARDS */
 
-.main {
+.maincontainer {
   width: 100%;
   height: 100%;
 
@@ -49,14 +56,16 @@ body {
   transition: box-shadow 0.6s;
 }
 
-.content {
+.contentMobile {
   width: 100%;
   height: 100%;
   color: #000000;
   background-color: #fff;
   backdrop-filter: blur(20px);
+
   border: 1px solid #fff;
   border-radius: 50px;
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -111,14 +120,26 @@ hr {
   color: rgb(46, 45, 45);
 }
 
-@media screen and (max-width: 360px) and (max-height: 800px) {
+/*ANCHOR PARTIE RESPONSIVE */
+@media screen and (max-width: 360px) {
+  .mobile {
+    display: block;
+  }
+  .desk{
+    display: none;
+  }
   body {
     background-color: olive;
   }
 
+  .title{
+    display: flex;
+    align-items: center;
+  }
+
   /* CAROUSEL */
 
-  .maincontainer{
+  .maincontainer {
     position: relative;
   }
   .carousel {
@@ -140,8 +161,8 @@ hr {
     width: 100%;
     padding: 0 20px;
     box-sizing: border-box;
-    top: 50%; 
-    transform: translateY(-50%)
+    top: 50%;
+    transform: translateY(-50%);
   }
 
   button .arrow {
@@ -149,19 +170,19 @@ hr {
     border-width: 0 4px 4px 0;
     display: inline-block;
     padding: 10px;
-    outline: none;
   }
+
   /* FOOTER */
   footer {
-    padding: 10px; 
+    padding: 10px;
   }
 
   .footernav {
-    flex-direction: column; 
-    align-items: center; 
+    flex-direction: column;
+    align-items: center;
   }
 
   .links {
-    margin-top: 10px; 
+    margin-top: 10px;
   }
 }
