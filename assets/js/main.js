@@ -28,7 +28,7 @@
 })()
 
 // Display the footer on every page
-(function displayFooter() {
+function displayFooter() {
   console.log("displayFooter");
   const footer = document.createElement("footer");
   footer.innerHTML = `
@@ -50,7 +50,9 @@
 </footer>
     `;
   document.body.append(footer);
-})()
+}
+
+displayFooter()
 
 
 // Top NavBar Animation
