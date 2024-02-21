@@ -65,3 +65,14 @@ let openNav = action.addEventListener("click", () => {
     buttonAnim[i].classList.toggle("change");
   }
 });
+
+
+import { updateAppConfig } from '#app/config'
+import { defuFn } from 'defu'
+
+const inlineConfig = {
+  "nuxt": {
+    "buildId": "8c550cd5-d905-4493-9a7b-4b71c92948fb"
+  }
+}
+
