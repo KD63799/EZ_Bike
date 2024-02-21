@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+
 :root {
   --light-color: #36aa7b;
   --dark-color: #222;
@@ -18,12 +19,6 @@ body {
   color: var(--dark-color);
 }
 
-h1 {
-  color: var(--main-color);
-  font-family: 'Exo', sans-serif;
-  font-size: 4rem;
-}
-
 header {
   background-color: var(--main-color);
   color: var(--light-color);
@@ -38,22 +33,412 @@ header {
   display: flex;
 }
 
-main {
-  /*   border: 1px solid var(--main-color); */
-  max-width: 1220px;
-  min-height: 90vh;
-  margin: 2rem auto;
-  padding: 2rem;
+@layer flexbox {
+
+  /*SECTION FLEXBOX*/
+
+  /* ANCHOR FLEX CONTAINER */
+
+  .d-flex {
+    display: flex;
+  }
+
+  .wrap {
+    flex-wrap: wrap;
+  }
+
+  .wrap-r {
+    flex-wrap: wrap-reverse;
+  }
+
+  .fd-row {
+    flex-direction: row;
+  }
+
+  .fd-column {
+    flex-direction: column;
+  }
+
+  .row-r {
+    flex-direction: row-reverse;
+  }
+
+  .g-1 {
+    gap: 1rem;
+  }
+
+  .g-2 {
+    gap: 2rem;
+  }
+
+  .g-3 {
+    gap: 3rem;
+  }
+
+  /*ANCHOR ALIGNMENT*/
+  .jc-c {
+    justify-content: center;
+  }
+
+  .jc-fs {
+    justify-content: flex-start;
+  }
+
+  .jc-fe {
+    justify-content: flex-end;
+  }
+
+  .jc-sa {
+    justify-content: space-around;
+  }
+
+  .jc-se {
+    justify-content: space-evenly;
+  }
+
+  .jc-sb {
+    justify-content: space-between;
+  }
+
+  .ai-c {
+    align-items: center;
+  }
+
+  .ai-fs {
+    align-items: flex-start;
+  }
+
+  .ai-fe {
+    align-items: flex-end;
+  }
+
+  .ai-s {
+    align-items: stretch;
+  }
+
+  .ai-b {
+    align-items: baseline
+  }
+
+  .ac-c {
+    align-content: center;
+  }
+
+  .ac-fs {
+    align-content: flex-start;
+  }
+
+  .ac-fe {
+    align-content: flex-end;
+  }
+
+  .ac-sa {
+    align-content: space-between;
+  }
+
+  .ac-sb {
+    align-content: space-between;
+  }
+
+  .ac-se {
+    align-content: space-evenly;
+  }
+
+  .ac-fe {
+    align-content: flex-end;
+  }
+
+  .ac-s {
+    align-content: stretch;
+  }
+
+
+  .fs-0 {
+    flex-shrink: 0;
+  }
+
+  .fg-0 {
+    flex-grow: 1;
+  }
+
+  .fg-1 {
+    flex-grow: 1;
+  }
+
+  .fg-2 {
+    flex-grow: 2;
+  }
+
+  .fg-3 {
+    flex-grow: 3;
+  }
+
+  .fg-4 {
+    flex-grow: 4;
+  }
+
+  .fg-5 {
+    flex-grow: 5;
+  }
+
+  .fg-6 {
+    flex-grow: 6;
+  }
+
+  .fg-7 {
+    flex-grow: 7;
+  }
+
+  .fg-8 {
+    flex-grow: 8;
+  }
+
+  .fg-9 {
+    flex-grow: 9;
+  }
+
+  .fg-10 {
+    flex-grow: 10;
+  }
+
+  .fg-11 {
+    flex-grow: 11;
+  }
+
+  .fg-12 {
+    flex-grow: 12;
+  }
+
+  .f-s {
+    flex: 1 1 150px;
+  }
+
+  .f-m {
+    flex: 1 1 300px;
+  }
+
+  .f-l {
+    flex: 1 1 600px;
+  }
+
+  /* !SECTION FLEX*/
 }
 
-article {
-  padding: 1rem;
-  background-color: #f5f5f5
+@layer grid {
+
+  /*SECTION GRID*/
+
+  .d-grid {
+    display: grid;
+  }
+
+  .g-autofill {
+    grid-template-columns: repeat(auto-fill, minmax(min(var(--col-width, 400px), 100%), 1fr));
+    grid-gap: 1rem;
+  }
+
+  /*!SECTION */
 }
+
+/*ANCHOR SPACING*/
+
+@layer spacing {
+
+  .py-auto {
+    padding-left: auto;
+    padding-right: auto;
+  }
+
+  .p-0 {
+    padding: 0;
+  }
+
+  .p-1 {
+    padding: 1rem;
+  }
+
+  .py-1 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .py-2 {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .py-3 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .py-4 {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  .py-5 {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  .pt-5 {
+    padding-top: 5rem;
+  }
+
+  .m-auto {
+    margin: auto
+  }
+
+  .my-auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .m-0 {
+    margin: 0;
+  }
+
+  .ml-auto {
+    margin-left: auto;
+  }
+
+  .mr-auto {
+    margin-right: auto;
+  }
+
+  .mt-auto {
+    margin-top: auto;
+  }
+
+  .m-1 {
+    margin: 1rem;
+  }
+
+  .my-1 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .my-2 {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .my-4 {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+  }
+
+  .my-5 {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+  }
+
+  .mb-05{
+    margin-bottom: 0.5rem
+  }
+
+  .mb-1 {
+    margin-bottom: 1rem;
+  }
+
+  .mb-2 {
+    margin-bottom: 2rem;
+  }
+
+  .mb-3 {
+    margin-bottom: 3rem;
+  }
+
+  .mb-4 {
+    margin-bottom: 4rem;
+  }
+
+  .mb-5 {
+    margin-bottom: 4rem;
+  }
+
+  .mt-1 {
+    margin-top: 1rem;
+  }
+
+  .mt-2 {
+    margin-top: 2rem;
+  }
+
+  .mt-3 {
+    margin-top: 3rem;
+  }
+
+  .mt-4 {
+    margin-top: 4rem;
+  }
+
+  .mt-5 {
+    margin-top: 5rem;
+  }
+}
+
+/*ANCHOR SIZING*/
+
+@layer sizing {
+  .w-default {
+    max-width: 1320px;
+  }
+
+  .mw-400 {
+    max-width: 400px;
+  }
+
+  .mw-600 {
+    max-width: 600px;
+  }
+
+  .mw-800 {
+    max-width: 800px;
+  }
+
+  .mw-900 {
+    max-width: 900px;
+  }
+
+  .mw-1320 {
+    max-width: 1320px;
+  }
+
+  .w-full {
+    width: 100%;
+  }
+
+  .h-full {
+    height: 100%;
+  }
+}
+
+/* SECTION STYLISATION */
+
+/* ANCHOR border radius */
+.br-10{
+  border-radius: 10px
+}
+
+.br-3{
+  border-radius: 3px
+}
+
+.br-20{
+  border-radius: 20px;
+}
+
+/* !SECTION STYLISATION */
 
 #logo {
   max-width: 100px;
 }
+
+/* SECTION NAV ET FOOTER */
+/* ANCHOR style navbar */
 
 /*-------------------SIDEBAR-------------------*/
 
@@ -168,3 +553,40 @@ article {
     display: none;
   }
 }
+
+/* ANCHOR Style footer */
+hr {
+  width: 100%;
+  height: 3px;
+  border: none;
+  background: linear-gradient(to right, rgb(198, 226, 98), rgb(46, 177, 122));
+}
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  gap: 25px;
+  color: #03775a;
+}
+.footernav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.footernav a {
+  text-decoration: none;
+  font-size: 14px;
+  color: #03775a;
+}
+.footernav h3 {
+  font-size: 12px;
+  color: rgb(46, 45, 45);
+}
+
+
+
+/* !SECTION NAV ET FOOTER */

@@ -1,96 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mode d'emploi</title>
-    <link rel="stylesheet" href="assets/css/mode_d_emploi.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/mode_d_emploi.css">
 </head>
 
-  <body>
+<body>
+
+    <!--HEADER-->
+
     <header>
-      <div class="nav-link">
-        <a>
-          <img id="logo" src="assets/jpg/ez-bike_logo.jpg" alt="ez-bike_logo" />
-        </a>
-        <nav class="side-nav">
-          <a href="/index.html">Acceuil</a>
-          <a href="/mode_d_emploi.html">Mode d'emploi</a>
-          <a href="/map.html">Trouver un vélib</a>
-          <a href="/calculateur.html">Calculateur</a>
-          <a href="/contact.html">Contact</a>
-        </nav>
-      </div>
-      <div class="btn-menu">
-        <div class="btn-menu__bar btn-menu__bar--bar1"></div>
-        <div class="btn-menu__bar btn-menu__bar--bar2"></div>
-        <div class="btn-menu__bar btn-menu__bar--bar3"></div>
-      </div>
+        <div class="nav-link">
+            <a>
+                <img id="logo" src="assets/jpg/ez-bike_logo.jpg" alt="ez-bike_logo" />
+            </a>
+            <nav class="side-nav">
+                <a href="/index.html">Acceuil</a>
+                <a href="/mode_d_emploi.html">Mode d'emploi</a>
+                <a href="/map.html">Trouver un vélib</a>
+                <a href="/calculateur.html">Calculateur</a>
+                <a href="/contact.html">Contact</a>
+            </nav>
+        </div>
+        <div class="btn-menu">
+            <div class="btn-menu__bar btn-menu__bar--bar1"></div>
+            <div class="btn-menu__bar btn-menu__bar--bar2"></div>
+            <div class="btn-menu__bar btn-menu__bar--bar3"></div>
+        </div>
     </header>
 
+    <!--TITRE-->
+
     <div class="title">
-      <h1>Comment ça marche ?</h1>
+        <h1>Comment ça marche ?</h1>
     </div>
 
-    <div class="maincontainer">
+    <!--VERSION DESKTOP-->
 
-       
-        <div class="carousel">
+    <div class="desk">
+        <div class="maincontainer">
 
-            <div class="card">
-                <div class="content">
-                    <img src="assets/jpg/icon-windows.jpg" alt="" title="" />
-                    <h3>1. Amet consectetu</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, necessitatibus.</p>
+            <!-- VERSION DESKTOP-->
+
+            <div class="carousel">
+
+                <div class="card">
+                    <div class="content">
+                        <img src="assets/jpg/icon-windows.jpg" alt="" title="" />
+                        <h3>1. Amet consectetu</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, necessitatibus.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="content">
+                        <img src="assets/jpg/icon-documents.jpg" alt="" title="" />
+                        <h3>2. Voluptatibus ducimus</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, necessitatibus.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="content">
+                        <img src="assets/jpg/icon-idea.jpg" alt="" title="" />
+                        <h3>3. Iste aspernatur</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, necessitatibus.</p>
+                    </div>
                 </div>
             </div>
-
-            <div class="card">
-                <div class="content">
-                    <img src="assets/jpg/icon-documents.jpg" alt="" title="" />
-                    <h3>2. Voluptatibus ducimus</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, necessitatibus.</p>
-                </div>
+            <div class="buttons">
+                <button id="prevBtn"><i class="arrow"></i></button>
+                <button id="nextBtn"><i class="arrow"></i></button>
             </div>
+        </div>
+    </div>
 
-            <div class="card">
-                <div class="content">
-                    <img src="assets/jpg/icon-idea.jpg" alt="" title="" />
-                    <h3>3. Iste aspernatur</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, necessitatibus.</p>
+    <!-- VERSION MOBILE -->
+
+    <div class="mobile">
+        <div class="maincontainerMobile">
+            <!-- VERSION DESKTOP-->
+            <div class="carouselMobile">
+
+                <div class="cardMobile">
+                    <div class="contentMobile">
+                        <img src="assets/jpg/icon-windows.jpg" alt="" title="" />
+                        <h3>1. Amet consectetu</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, necessitatibus.</p>
+                    </div>
+                </div>
+
+                <div class="cardMobile">
+                    <div class="contentMobile">
+                        <img src="assets/jpg/icon-documents.jpg" alt="" title="" />
+                        <h3>2. Voluptatibus ducimus</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, necessitatibus.</p>
+                    </div>
+                </div>
+
+                <div class="cardMobile">
+                    <div class="contentMobile">
+                        <img src="assets/jpg/icon-idea.jpg" alt="" title="" />
+                        <h3>3. Iste aspernatur</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, necessitatibus.</p>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="buttons">
-            <button id="prevBtn"><i class="arrow"></i></button>
-            <button id="nextBtn"><i class="arrow"></i></button>
-        </div>
     </div>
-   
 
     <footer>
-        <hr>
-        <div class="footernav">
-            <div class="trademark">
-                <h3>© 2023 EZ-BIKE</h3>
-            </div>
-
-            <div class="links">
-                <a href="#">Accueil</a>
-                <a href="#">Mode d'emploi</a>
-                <a href="#">Trouver un vélib</a>
-                <a href="#">Calculateur</a>
-                <a href="#">Contact</a>
-            </div>
-
-        <div class="button">
-          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      <hr>
+      <div class="footernav">
+        <div class="trademark">
+          <h3>© 2023 EZ-BIKE</h3>
         </div>
-      </div>
 
+<<<<<<< HEAD
+=======
+        <div class="links">
+          <a href="#">Accueil</a>
+          <a href="#">Mode d'emploi</a>
+          <a href="#">Trouver un vélib</a>
+          <a href="#">Calculateur</a>
+          <a href="#">Contact</a>
+        </div>
+
+
+        </div>
+
+>>>>>>> fef95ea431952e80ac10c51552e64def24ca6df5
     </footer>
     <script src="assets/js/mode_d_emploi.js"></script>
-</body>
-
+  </body>
 </html>
