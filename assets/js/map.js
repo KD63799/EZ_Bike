@@ -27,7 +27,7 @@ polygon.bindPopup("I am a polygon.");
 
 var popup = L.popup()
   .setLatLng([43.3, 5.4])
-  .setContent("I am a standalone popup.")
+  .setContent("Je suis un pop-up.")
   .openOn(map);
 
 function onMapClick(e) {
@@ -35,4 +35,5 @@ function onMapClick(e) {
 }
 
 map.on("click", onMapClick);
+
 

@@ -1,10 +1,13 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: gainsboro;
   margin: 0;
-  justify-content: center;
-  align-items: center;
   min-height: 80vh;
+}
+
+.comming-soon__bgimg {
+  background-image: url("../svg/bubbles.svg");
+  background-size: 50%;
+  background-position: center;
 }
 
 .container {
@@ -22,9 +25,9 @@ img {
 .rectangle {
   width: 100px;
   height: 90px;
- background-color: green;
-  padding: 10px; 
-  margin: 10px; 
+  background-color: green;
+  padding: 10px;
+  margin: 10px;
   font-size: 24px;
   font-weight: bold;
   display: flex;
@@ -36,13 +39,33 @@ img {
   display: flex;
   justify-content: center;
   gap: 10px;
-  padding: 2px;
 }
 h1 {
   color: red;
 }
 p {
-   font-weight: bolder;
+  font-weight: bolder;
   font-size: larger;
+}
 
+@media screen and (max-width: 768px) {
+  .comming-soon__bgimg {
+    background-image: url("../svg/bubbles.svg");
+    background-size: contain;
+    background-position: center;
+  }
+  .rectangle {
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    margin: 3px;
+  }
+  @media (min-width: 769px) {
+    .rectangle {
+      width: 100px; 
+      height: 90px; 
+      margin: 10px; 
+      font-size: 24px; 
+    }
+  }
 }
