@@ -2,12 +2,12 @@ const carouselItems = document.querySelectorAll(".card");
 let currentIndex = 0;
 
 function showSlide(index) {
-  // Cacher toutes les cartes du carousel
+  // Cache toutes les cartes du carousel
   carouselItems.forEach((item) => {
     item.style.display = "none";
   });
 
-  // Afficher la carte à l'index spécifié
+  // Affiche la carte à l'index spécifié
   carouselItems[index].style.display = "block";
 }
 
