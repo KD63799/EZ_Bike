@@ -1,4 +1,4 @@
-var launchDate = new Date(2024, 8, 1, 12, 0, 0); 
+var launchDate = new Date(2024, 8, 1, 0, 0, 0); 
 
 
 function updateCountdown() {
@@ -22,10 +22,6 @@ function updateCountdown() {
     document.getElementById('seconds').innerHTML = "0s";
   }
 }
+updateCountdown();
 
-
-window.onload = function() {
-  updateCountdown();
-
-  setInterval(updateCountdown, 1000);
-};
+setInterval(updateCountdown, 1000);
