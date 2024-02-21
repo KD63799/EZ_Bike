@@ -32,20 +32,19 @@
       </div>
     </header>
 
-    <section>
+    <section class="section_calc d-flex fd-column jc-c ai-c mt-2">
       <h1>
         Calculateur d'émissions de CO2<br />Trajets domicile / travail en
         voiture
       </h1>
-      <div class="form_contenair">
-        <form action="#">
-          <label for="dist_input"
-            >Distance parcourue par jour (en kilomètre):</label
-          >
+      <div class="form_contenair py-auto br-10 m-1 p-1 mw-900">
+        <form class="d-flex fd-column jc-fs ai-b" action="#">
+          <label for="dist_input" class="mb-05">Distance parcourue par jour (en kilomètre):</label>
           <input type="number" id="dist_input" name="dist_input" />
-          <label for="input_day">Nombre de jours travaillé par semaine:</label>
+          <label for="input_day" class="mb-05">Nombre de jours travaillé par semaine:</label>
           <input type="number" id="input_day" name="input_day" />
-          <input id="form_btn" type="submit" value="Calculer" />
+          <input id="form_btn" class="br-20 m-1" type="submit" value="Calculer" />
+          <div class="form_circle"></div>
         </form>
         <p>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore
@@ -56,12 +55,30 @@
 
       <div id="popUp" class="modal">
         <!-- Modal content -->
-        <div class="popUp_content">
+        <div class="popUp_content m-auto p-1 br-10">
           <span class="close">&times;</span>
           <p id="popUp_txt"></p>
         </div>
       </div>
     </section>
+
+    <footer>
+      <hr>
+      <div class="footernav">
+        <div class="trademark">
+          <h3>© 2023 EZ-BIKE</h3>
+        </div>
+
+        <div class="links">
+          <a href="#">Accueil</a>
+          <a href="#">Mode d'emploi</a>
+          <a href="#">Trouver un vélib</a>
+          <a href="#">Calculateur</a>
+          <a href="#">Contact</a>
+        </div>
+      </div>
+    </footer>
+
 
     <script src="/assets/js/main.js"></script>
     <script src="/assets/js/calculateur.js"></script>
