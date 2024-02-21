@@ -1,4 +1,4 @@
-const carouselItems = document.querySelectorAll(".card");
+const carouselItems = document.querySelectorAll(".cardMobile");
 let currentIndex = 0;
 
 function showSlide(index) {
