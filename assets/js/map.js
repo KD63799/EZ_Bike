@@ -37,3 +37,23 @@ function onMapClick(e) {
 map.on("click", onMapClick);
 
 
+fetch("https://api.omega.fifteen.eu/gbfs/2.2/marseille/en/station_information.json?&key=MjE0ZDNmMGEtNGFkZS00M2FlLWFmMWItZGNhOTZhMWQyYzM2")
+  .then(response => response.json()) 
+  .then(data => {
+
+    const stations = data.data.stations;
+    console.log(stations);
+
+    stations.forEach(station => {
+
+      const latitude = station.lat;
+      const longitude = station.lon;
+      console.log(latitude, longitude);
+
+      L.marker([latitude, longitude]).addTo(map)
+        .bindPopup(`<b>${station.name}</b><br>${station.address}`);
+    });
+  })
+  .catch(error => {
+    console.error('Erreur', error);
+  });
