@@ -29,8 +29,36 @@ header {
   box-shadow: 0 1px 1px 0 rgba(255, 255, 255, 0.158), 0 3px 4px 0 rgba(75, 75, 75, 0.19);
 }
 
-.nav-link {
+main {
+  padding-left: 60px;
+}
+
+.ez-bike_hero {
+  max-width: 400px;
+}
+
+.ez-bike_city {
+  max-width: 300px;
+}
+
+.ez-bike-station {
+  max-width: 300px;
+  border-radius: 150px;
+}
+
+.subhead_title {
   display: flex;
+  justify-content: space-between;
+}
+
+.display_card1 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.display_card2 {
+  display: flex;
+  justify-content: space-between;
 }
 
 @layer flexbox {
@@ -444,10 +472,26 @@ header {
 
 /*CSS for Side Nav*/
 
+header {
+  width: 100%;
+  background-color: var(--main-color);
+  color: var(--light-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  box-shadow: 0 1px 1px 0 rgba(255, 255, 255, 0.158), 0 3px 4px 0 rgba(75, 75, 75, 0.19);
+}
+
+.nav-link {
+  display: flex;
+}
+
 .side-nav {
   width: 0;
   height: 100%;
   position: fixed;
+  z-index: 2;
   top: 0;
   right: 0;
   background-color: var(--main-color);
@@ -482,7 +526,7 @@ header {
   display: block;
   padding: 1rem 2rem;
   font-size: 1.5rem;
-  z-index: 1;
+  z-index: 2;
 }
 
 @keyframes anim01 {
