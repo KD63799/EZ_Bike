@@ -29,6 +29,38 @@ header {
   box-shadow: 0 1px 1px 0 rgba(255, 255, 255, 0.158), 0 3px 4px 0 rgba(75, 75, 75, 0.19);
 }
 
+main {
+  padding-left: 60px;
+}
+
+.ez-bike_hero {
+  max-width: 400px;
+}
+
+.ez-bike_city {
+  max-width: 300px;
+}
+
+.ez-bike-station {
+  max-width: 300px;
+  border-radius: 150px;
+}
+
+.subhead_title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.display_card1 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.display_card2 {
+  display: flex;
+  justify-content: space-between;
+}
+
 .nav-link {
   display: flex;
 }
