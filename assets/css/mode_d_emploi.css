@@ -2,30 +2,16 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 body {
-  width: 100%;
-  height: 100vh;
   font-family: "Open Sans", sans-serif;
-  align-items: center;
-  justify-content: center;
   background-color: #fff;
 }
 
-/* Cache la partie mobile sans le carousel */
-.mobile {
-  display: none;
-}
-.desk{
-  display: block;
-}
 /* TITLE */
 
 .title h1 {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin-top: 200px;
+  text-align: center;
+  margin-top: 50px;
 }
 .buttons {
   position: relative;
@@ -34,48 +20,59 @@ body {
 }
 /* CARDS */
 
+.carouselMobile {
+  position: relative;
+}
 .maincontainer {
   width: 100%;
   height: 100%;
+  padding-bottom: 100px;
 
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
 }
-
 .card {
   width: 250px;
   height: 300px;
   cursor: pointer;
   position: relative;
 }
+
+.cardMobile {
+  width: 250px;
+  height: 300px;
+  cursor: pointer;
+  position: relative;
+
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  border-radius: 15px;
+}
 .card:hover {
   border-radius: 20px;
   box-shadow: 1px 8px 20px grey;
   transition: box-shadow 0.6s;
 }
-
-.contentMobile {
+.content {
   width: 100%;
   height: 100%;
   color: #000000;
   background-color: #fff;
   backdrop-filter: blur(20px);
-
   border: 1px solid #fff;
   border-radius: 50px;
-
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-
-img {
+.cardImg {
   width: 100px;
   height: 100px;
   margin-bottom: 1rem;
+  padding-top: 10px;
 }
 
 h3 {
@@ -83,74 +80,57 @@ h3 {
   font-size: 1.5em;
   text-align: center;
 }
-
 p {
   padding: 0.3em 1.5em;
   font-size: 0.8em;
   text-align: center;
 }
-/* FOOTER */
-hr {
-  width: 100%;
-  height: 3px;
-  border: none;
-  background: linear-gradient(to right, rgb(198, 226, 98), rgb(46, 177, 122));
-}
-.links {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  gap: 10px;
-  color: #03775a;
-}
-.footernav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-}
 
-.footernav a {
-  text-decoration: none;
-  font-size: 14px;
-  color: #03775a;
+/* Cache la partie mobile sans le carousel */
+.mobile {
+  display: none;
 }
-.footernav h3 {
-  font-size: 12px;
-  color: rgb(46, 45, 45);
+.desk {
+  display: block;
 }
-
-/*ANCHOR PARTIE RESPONSIVE */
-@media screen and (max-width: 360px) {
-  .mobile {
-    display: block;
-  }
-  .desk{
+/* ANCHOR PARTIE RESPONSIVE MOBILE*/
+@media screen and (max-width: 800px) {
+  .desk {
     display: none;
   }
-  body {
-    background-color: olive;
-  }
-
-  .title{
+  .mobile {
     display: flex;
-    align-items: center;
+    justify-content: center;
+    margin-bottom: 30%;
+  }
+  .contentMobile {
+    text-align: center;
+  }
+  body {
+    background-color: rgb(255, 255, 255);
   }
 
   /* CAROUSEL */
 
   .maincontainer {
     position: relative;
+    padding-bottom: 100px;
   }
   .carousel {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-
   .card {
     margin-right: 0;
     margin-bottom: 20px;
+  }
+
+  img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 1rem;
+    padding-top: 10px;
   }
 
   .buttons {
@@ -159,12 +139,10 @@ hr {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    padding: 0 20px;
     box-sizing: border-box;
     top: 50%;
     transform: translateY(-50%);
   }
-
   button .arrow {
     border: solid #03775a;
     border-width: 0 4px 4px 0;
@@ -172,17 +150,10 @@ hr {
     padding: 10px;
   }
 
-  /* FOOTER */
-  footer {
-    padding: 10px;
-  }
-
-  .footernav {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .links {
+  h1 {
     margin-top: 10px;
+    text-align: center;
+    height: fit-content;
+    font-size: 32px;
   }
 }
