@@ -33,10 +33,7 @@ async function getData(){
 
       L.marker([latitude, longitude]).addTo(map)
       .bindPopup(`<b>${element.name}</b><br>Bike available: ${qtt} `);
-
   });
-
-
 }
 
 getData()
