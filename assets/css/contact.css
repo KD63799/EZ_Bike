@@ -37,6 +37,10 @@ h1 {
         width: 100%;
     }
 
+    form input, #name {
+        height: 1.8rem;
+    }
+
     form input, #message {
         margin-bottom: 1.5rem;
         border-radius: 3px;
@@ -73,6 +77,31 @@ h1 {
         top: -60px;
         right: -60px;
     }
+
+    /* ANCHOR Style Form */
+
+.danger {
+    outline: 3px solid red;
+  }
+  
+  .success {
+    outline: 3px solid green;
+  }
+  
+  .formulaire {
+    position: relative;
+  }
+  
+  .success-checked::after {
+    content: "\F26E";
+    font-family: 'bootstrap-icons';
+    color: green;
+    font-size: 1.5em;
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%);
+  }
 
 /* ANCHOR media query */
 

@@ -1,39 +1,58 @@
-var map = L.map("map").setView([43.3, 5.4], 13);
+const bikesApi =
+  "https://api.omega.fifteen.eu/gbfs/2.2/marseille/en/station_status.json?key=MjE0ZDNmMGEtNGFkZS00M2FlLWFmMWItZGNhOTZhMWQyYzM2";
+const informationApi =
+  "https://api.omega.fifteen.eu/gbfs/2.2/marseille/en/station_information.json?key=MjE0ZDNmMGEtNGFkZS00M2FlLWFmMWItZGNhOTZhMWQyYzM2";
 
-L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
-  maxZoom: 19,
-  attribution:
-    '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+  let bikeIcon = L.Icon.extend({
+  options: {
+      shadowUrl: 'bike-shadow.jpg',
+      iconSize:     [20, 20],
+      shadowSize:   [0, 10],
+      iconAnchor:   [22, 24],
+      shadowAnchor: [4, 62],
+      popupAnchor:  [-3, -76]
+  }
+});
+  let greenIcon = new bikeIcon({iconUrl: 'assets/svg/bike-green.svg'}),
+  redIcon = new bikeIcon({iconUrl: 'assets/svg/bike-red.svg'}),
+  orangeIcon = new bikeIcon({iconUrl: 'assets/svg/bike-orange.svg'});
+
+fetch(bikesApi)
+  .then((response) => response.json())
+  .then((stations) => {
+    return fetch(informationApi)
+      .then((response) => response.json())
+      .then((information) => {
+        createMap(stations, information);
+      });
+  })
+  .catch((error) => console.error("Error fetching stations:", error));
+
+function createMap(stations, information) {
+  const map = L.map("map").setView([43.2965, 5.3698], 12);
+
+  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map);
 
-
-
-async function getData(){
-  const url1 = 'https://api.omega.fifteen.eu/gbfs/2.2/marseille/en/station_status.json?&key=MjE0ZDNmMGEtNGFkZS00M2FlLWFmMWItZGNhOTZhMWQyYzM2'
-  const url2 = `https://api.omega.fifteen.eu/gbfs/2.2/marseille/en/station_information.json?&key=MjE0ZDNmMGEtNGFkZS00M2FlLWFmMWItZGNhOTZhMWQyYzM2`
-
-  const responses = await Promise.all([fetch(url1), fetch(url2)])
-
-  const dataQttVelo = await responses[0].json()
-  const dataPosVelo = await responses[1].json()
-
-  console.log(dataQttVelo);
-  console.log(dataPosVelo);
-
-  const stations = dataPosVelo.data.stations;
-  const qttVelo = dataQttVelo.data.stations
-
-  stations.forEach(element => {
-      const latitude = element.lat;
-      const longitude = element.lon;
-      const stationID = element.station_id           
-
-      let found = qttVelo.find((element) => element.station_id === stationID);
-      let qtt = found.num_bikes_available
-
-      L.marker([latitude, longitude]).addTo(map)
-      .bindPopup(`<b>${element.name}</b><br>Bike available: ${qtt} `);
+  stations.data.stations.forEach((station) => {
+    const coord = information.data.stations.find(
+      (info) => info.station_id === station.station_id
+    );
+    const statusClass = station.num_bikes_available;
+    console.log(statusClass)
+    let icon
+    if (statusClass > 3) {
+      icon = greenIcon;
+    } else if (statusClass > 0) {
+      icon = orangeIcon;
+    } else {
+      icon = redIcon;
+    }
+    var marker = L.marker([coord.lat, coord.lon], {
+      icon: icon
+    }).addTo(map);
+    marker.bindPopup(`<strong>Station ${coord.name}</strong><br>Bikes available: ${station.num_bikes_available}`).openPopup();
   });
 }
-
-getData()
