@@ -30,7 +30,7 @@ h1 {
     }
 
     .mini-contenair {
-        width: 50%;
+        flex: 1 1 300px;
     }   
 
     .msg-contenair {
