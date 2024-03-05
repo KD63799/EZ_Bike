@@ -12,6 +12,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   font-size: 1.125rem;
@@ -22,47 +26,108 @@ body {
 	grid-template-rows: auto 1fr auto;
 }
 
-header {
-  background-color: var(--main-color);
-  color: var(--light-color);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 1rem;
-  box-shadow: 0 1px 1px 0 rgba(255, 255, 255, 0.158), 0 3px 4px 0 rgba(75, 75, 75, 0.19);
-}
-
 main {
-  padding-left: 60px;
   padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
-.ez-bike_hero {
-  max-width: 400px;
-}
-
-.ez-bike_city {
-  max-width: 300px;
-}
-
-.ez-bike-station {
-  max-width: 300px;
-  border-radius: 150px;
-}
-
-.subhead_title {
+.anchor {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 
-.display_card1 {
-  display: flex;
-  justify-content: space-between;
+.anchor img {
+  width: 50px;
 }
 
-.display_card2 {
+/* Section hero */
+  .ez-bike_hero {
+    max-width: 600px;
+    width: 100%;
+    border-radius: 0px 0px 0px 40% ;
+  }
+  
+  .subhead1, .subhead2 {
+    flex: 1 1 300px;
+  }
+
+  .subhead1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .subhead2 {
+    display: flex;
+    justify-content: flex-end;
+    align-items: baseline;
+  }
+
+  .ez-bike_city {
+    max-width: 400px;
+    border-radius: 400px;
+  }
+
+  .ez-bike-station {
+    max-width: 400px;
+    border-radius: 400px;
+  }
+
+  .subhead_title {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap-reverse;
+    gap: 32px;
+  }
+
+  .subhead_title h1 {
+    font-size: 52px;
+    color: rgb(0, 153, 97);
+  }
+
+  .subhead_title article {
+    max-width: 600px;
+
+  }
+
+  /* Style btn hero */
+    .btnContenaire {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    #btnCalc {
+      border-radius: 20px;
+      background: linear-gradient(48deg,#14b158 10%, #45dc45 90%);
+      color: white;
+      border: none;
+      padding: 8px 15px;
+      width: fit-content;
+      height: fit-content;
+      text-decoration: none;
+    }
+
+    #btnMap {
+      border-radius: 20px;
+      text-decoration: none;
+      width: fit-content;
+      height: fit-content;
+      color: rgb(0, 153, 97);
+      border: 2px solid rgb(0, 153, 97);
+      padding: 8px 15px;
+    }
+
+#display_card1, #display_card2{
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#display_card2 {
+  flex-wrap: wrap-reverse;
 }
 
 @layer flexbox {
@@ -582,7 +647,7 @@ header {
   transform: rotate(45deg) translate(-8px, -7px);
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 800px) {
   .side-nav {
     width: auto;
     position: static;
