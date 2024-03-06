@@ -22,6 +22,11 @@ img {
   align-items: center;
 }
 
+.leaf {
+  position: absolute;
+  z-index: -1;
+}
+
 .rectangle {
   width: 100px;
   height: 90px;
@@ -34,6 +39,7 @@ img {
   justify-content: center;
   align-items: center;
   color: whitesmoke;
+  border-radius: 20px;
 }
 .countdown-container {
   display: flex;

@@ -1,8 +1,8 @@
 const checker = (arr) => arr.every((v) => v === true);
 
 // Compter de nombre de caractères
-function countChar(input) {
-    if (input.value.length > 2 && input.value.length <= 30) {
+function countChar(input, longueur) {
+    if (input.value.length > 2 && input.value.length <= longueur) {
         input.classList.remove("danger");
         input.classList.add("success");
         input.parentElement.classList.add("success-checked");
@@ -69,7 +69,7 @@ submitBtn.addEventListener("click", (e) => {
 
         if (field.id === "firstName" || field.id === "lastName") {
             field.value = sanitizeInput(field.value);
-            isValid = countChar(field);
+            isValid = countChar(field, 20);
             verif.push(isValid);
         }
 
@@ -84,14 +84,20 @@ submitBtn.addEventListener("click", (e) => {
         }
         if (field.id === "message") {
             field.value = sanitizeInput(field.value);
-            isValid = countChar(field);
+            isValid = countChar(field, 200);
             verif.push(isValid);
         }
     }
+
     console.log("verif => ", verif);
     if (checker(verif)) {
         console.log("✅ DATA SENT TO SERVER");
-        setTimeout(() => form.submit(), 2000);
+        setTimeout(() => form.submit(), 5000);
+        localStorage.setItem("idFirstName", form.elements.firstName.value);
+        localStorage.setItem("idLastName", form.elements.lastName.value);
+        localStorage.setItem("idEmail", form.elements.email.value);
+        localStorage.setItem("idPhone", form.elements.phone.value);
+        localStorage.setItem("idMessage", form.elements.message.value);
     } else {
         console.warn("FORM IS INVALID");
     }
