@@ -1,8 +1,8 @@
 const checker = (arr) => arr.every((v) => v === true);
 
 // Compter de nombre de caractères
-function countChar(input) {
-    if (input.value.length > 2 && input.value.length <= 30) {
+function countChar(input, longueur) {
+    if (input.value.length > 2 && input.value.length <= longueur) {
         input.classList.remove("danger");
         input.classList.add("success");
         input.parentElement.classList.add("success-checked");
@@ -69,7 +69,7 @@ submitBtn.addEventListener("click", (e) => {
 
         if (field.id === "firstName" || field.id === "lastName") {
             field.value = sanitizeInput(field.value);
-            isValid = countChar(field);
+            isValid = countChar(field, 20);
             verif.push(isValid);
         }
 
@@ -84,7 +84,7 @@ submitBtn.addEventListener("click", (e) => {
         }
         if (field.id === "message") {
             field.value = sanitizeInput(field.value);
-            isValid = countChar(field);
+            isValid = countChar(field, 200);
             verif.push(isValid);
         }
     }

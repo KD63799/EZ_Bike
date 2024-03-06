@@ -5,12 +5,9 @@ const informationApi =
 
   let bikeIcon = L.Icon.extend({
   options: {
-      shadowUrl: 'bike-shadow.jpg',
       iconSize:     [20, 20],
-      shadowSize:   [0, 10],
       iconAnchor:   [22, 24],
-      shadowAnchor: [4, 62],
-      popupAnchor:  [-3, -76]
+      popupAnchor:  [-13, -28]
   }
 });
   let greenIcon = new bikeIcon({iconUrl: 'assets/svg/bike-green.svg'}),
