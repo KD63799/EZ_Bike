@@ -88,11 +88,16 @@ submitBtn.addEventListener("click", (e) => {
             verif.push(isValid);
         }
     }
+
     console.log("verif => ", verif);
     if (checker(verif)) {
         console.log("✅ DATA SENT TO SERVER");
-        setTimeout(() => form.submit(), 10000);
-        localStorage.setItem("id", "18/04/2024");
+        setTimeout(() => form.submit(), 5000);
+        localStorage.setItem("idFirstName", form.elements.firstName.value);
+        localStorage.setItem("idLastName", form.elements.lastName.value);
+        localStorage.setItem("idEmail", form.elements.email.value);
+        localStorage.setItem("idPhone", form.elements.phone.value);
+        localStorage.setItem("idMessage", form.elements.message.value);
     } else {
         console.warn("FORM IS INVALID");
     }
