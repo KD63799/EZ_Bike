@@ -12,16 +12,123 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   font-size: 1.125rem;
   margin: 0;
   color: var(--dark-color);
-	min-height: 100vh;
-	display: grid;
+  min-height: 100vh;
+  display: grid;
 	grid-template-rows: auto 1fr auto;
 }
 
+main {
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.anchor {
+  display: flex;
+  justify-content: center;
+}
+
+.anchor img {
+  width: 50px;
+}
+
+/* Section hero */
+  .ez-bike_hero {
+    max-width: 600px;
+    width: 100%;
+    border-radius: 0px 0px 0px 40% ;
+  }
+  
+  .subhead1, .subhead2 {
+    flex: 1 1 300px;
+  }
+
+  .subhead1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .subhead2 {
+    display: flex;
+    justify-content: flex-end;
+    align-items: baseline;
+  }
+
+  .ez-bike_city {
+    max-width: 400px;
+    border-radius: 400px;
+  }
+
+  .ez-bike-station {
+    max-width: 400px;
+    border-radius: 400px;
+  }
+
+  .subhead_title {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap-reverse;
+    gap: 32px;
+  }
+
+  .subhead_title h1 {
+    font-size: 52px;
+    color: rgb(0, 153, 97);
+  }
+
+  .subhead_title article {
+    max-width: 600px;
+
+  }
+
+  /* Style btn hero */
+    .btnContenaire {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    #btnCalc {
+      border-radius: 20px;
+      background: linear-gradient(48deg,#14b158 10%, #45dc45 90%);
+      color: white;
+      border: none;
+      padding: 8px 15px;
+      width: fit-content;
+      height: fit-content;
+      text-decoration: none;
+    }
+
+    #btnMap {
+      border-radius: 20px;
+      text-decoration: none;
+      width: fit-content;
+      height: fit-content;
+      color: rgb(0, 153, 97);
+      border: 2px solid rgb(0, 153, 97);
+      padding: 8px 15px;
+    }
+
+#display_card1, #display_card2{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#display_card2 {
+  flex-wrap: wrap-reverse;
+}
 
 @layer flexbox {
 
@@ -540,7 +647,7 @@ header {
   transform: rotate(45deg) translate(-8px, -7px);
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 800px) {
   .side-nav {
     width: auto;
     position: static;
@@ -592,7 +699,6 @@ hr {
   font-size: 12px;
   color: rgb(46, 45, 45);
 }
-
 
 
 /* !SECTION NAV ET FOOTER */

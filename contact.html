@@ -2,42 +2,54 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/jpg" href="assets/jpg/ez-bike_logo_favicon.jpg">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="/assets/css/contact.css">
     <title>Homepage</title>
   </head>
 
   <body>
-    <main>
-      <article>
+    <section class="section_calc d-flex fd-column jc-c ai-c mt-2">
+      <h1 class="m-1">Contact</h1>
+      <div class="contact_contenair py-auto br-10 m-1 p-1 mw-900">
+        <form action="#">
+          <div class="mini-contenair">
+            <label for="firstname">Nom:</label>
+            <input type="name" id="firstName" name="name" placeholder="Nom" required>
+          </div>
+          <div class="mini-contenair">
+            <label for="lastname">Prénom:</label>
+            <input type="name" id="lastName" name="firstname" placeholder="Prénom" required>
+          </div>
+          <div class="mini-contenair">
+            <label for="phone">Numéro:</label>
+            <input type="tel" id="phone" name="phone" placeholder="Numéro" required>
+          </div>
+          <div class="mini-contenair">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Email" required>
+          </div>
+          <div class="msg-contenair">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" placeholder="Message" required></textarea>
+          </div>
+
+          <div class="form_circle"></div>
+        </form>
+        <input id="form_btn" class="br-20 m-1" type="submit" value="Envoyer"/>
         <p>
-          <h1> sur EZ-BIKE, votre service de vélo en libre-service à
-          Marseille. Nous vous proposons une alternative écologique et pratique
-          pour vous déplacer dans la ville. 
-          <br>
-          Découvrez comment cela fonctionne : </h1>
-          <h2>1 - Comment ça marche ?</h2>
-          <br>
-          Ipsa aut ea consequatur rem dolorum expedita
-          iste. Qui mollitia eos repellendus dicta impedit a. Recusandae magni
-          qui corporis dolor architecto aut reiciendis veniam. Repellendus eum a
-          quia similique. Aut voluptatem nihil sint. Quis nihil rem totam beatae
-          et dolores aperiam laboriosam. Sed mollitia consectetur tempora
-          consequuntur. Repellendus necessitatibus facere est eveniet dolores. 
-          <h2>2 - Se rendre à la station Et et velit voluptatem repudiandae sequi</h2>
-          <br>
-          rerum. Est necessitatibus a sit  eum quia quasi veritatis. Iste
-          temporibus neque voluptas et veritatis ut corrupti qui sunt. Dolor
-          quasi accusantium laborum pariatur aperiam. Dolores sint quibusdam
-          maiores nesciunt deserunt possimus vel. Ipsa sapiente consequatur eos.
-          Adipisci asperiores deserunt rerum consectetur.
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore
+          neque maxime earum omnis dolor assumenda explicabo eius ex odit, ipsum
+          maiores temporibus minus obc
         </p>
-      </article>
-    </main>
+      </div>
+    </section>
   
     <script src="/assets/js/main.js"></script>
+    <script src="assets/js/form.js"></script>
   </body>
 </html>

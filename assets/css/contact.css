@@ -1,0 +1,137 @@
+/* ANCHOR global */
+h1 {
+    text-align: center;
+    color: #000;
+    font-size: 46px
+}
+
+.section_calc {
+    background-image: url(/assets/jpg/Calculateur.jpg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 7rem 0px;
+}
+
+/* ANCHOR style form */
+    .contact_contenair {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        background-color: rgba(255, 255, 255, 0.841);
+        backdrop-filter: blur(5px);
+        }
+
+    form {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: baseline;
+        align-content: space-evenly;
+    }
+
+    .mini-contenair {
+        flex: 1 1 300px;
+    }   
+
+    .msg-contenair {
+        width: 100%;
+    }
+
+    form input, #name {
+        height: 1.8rem;
+    }
+
+    form input, #message {
+        margin-bottom: 1.5rem;
+        border-radius: 3px;
+        border: none;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.315);
+        backdrop-filter: blur(5px);
+        width: 95%;
+    }
+
+    #message {
+        width: 100%;
+        resize: vertical;
+    }
+    
+    #form_btn {
+        background-color: rgb(0, 153, 97);
+        color: white;
+        border: none;
+        padding: 5px 12px;
+        width: fit-content;
+    }
+    
+    #form_btn:hover {
+        background-color: rgb(0, 103, 65);
+        cursor: pointer;
+    }
+    
+    .form_circle{
+        border: 15px solid rgb(1, 152, 97);
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        top: -60px;
+        right: -60px;
+    }
+
+    /* ANCHOR Style Form */
+
+.danger {
+    outline: 3px solid red;
+  }
+  
+  .success {
+    outline: 3px solid green;
+  }
+  
+  .formulaire {
+    position: relative;
+  }
+  
+  .success-checked::after {
+    content: "\F26E";
+    font-family: 'bootstrap-icons';
+    color: green;
+    font-size: 1.5em;
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%);
+  }
+
+/* ANCHOR media query */
+
+  @media screen and (max-width: 1200px) {
+    h1 {
+        font-size: 36px;
+    }
+    #popUp {
+        padding-top: 25%;
+    }
+    .vide {
+        height: 50px;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    section {
+        padding: 2rem 0;
+    }
+    #popUp {
+        padding-top: 80%;
+    }
+
+    .form_circle {
+        display: none;
+    }
+    .vide {
+        height: 20px;
+    }
+  }
