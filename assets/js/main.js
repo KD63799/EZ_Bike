@@ -4,7 +4,7 @@
   console.log("displayHeader");
   const header = document.createElement("header");
   header.innerHTML = `
-    <header>
+    <header id="header">
     <div class="nav-link">
       <a>
         <img id="logo" src="assets/jpg/ez-bike_logo.jpg" alt="ez-bike_logo" />
