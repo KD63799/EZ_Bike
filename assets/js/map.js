@@ -17,7 +17,6 @@ const informationApi =
       iconSize:     [20, 20],
       iconAnchor:   [22, 24],
       popupAnchor:  [-13, -28]
-      popupAnchor:  [-3, -76]
   }
 });
   let greenIcon = new bikeIcon({iconUrl: 'assets/svg/bike-green.svg'}),

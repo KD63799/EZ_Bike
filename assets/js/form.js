@@ -91,7 +91,8 @@ submitBtn.addEventListener("click", (e) => {
     console.log("verif => ", verif);
     if (checker(verif)) {
         console.log("✅ DATA SENT TO SERVER");
-        setTimeout(() => form.submit(), 2000);
+        setTimeout(() => form.submit(), 10000);
+        localStorage.setItem("id", "18/04/2024");
     } else {
         console.warn("FORM IS INVALID");
     }
