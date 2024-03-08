@@ -550,7 +550,7 @@ header {
   width: 0;
   height: 100%;
   position: fixed;
-  z-index: 2;
+  z-index: 500;
   top: 0;
   right: 0;
   background-color: var(--main-color);
@@ -579,13 +579,14 @@ header {
   width: 75vw;
   transition: width 0.5s;
   animation: anim01 0.5s;
+  z-index: 500;
 }
 
 .btn-menu {
   display: block;
-  padding: 1rem 2rem;
+  padding: 1rem;
   font-size: 1.5rem;
-  z-index: 2;
+  z-index: 501;
 }
 
 @keyframes anim01 {
@@ -690,27 +691,16 @@ hr {
   color: rgb(46, 45, 45);
 }
 
-/* ANCHOR Style lien et liste */
+/* ANCHOR style lien et liste */
 
 
-ul { 
-  list-style: none; 
-  display: table;
-  width: 600px;
-  text-align: center;
-}
-li { 
-  display: table-cell; 
-  position: relative; 
-  padding: 15px 0;
-}
-a {
+nav a, footer a {
   color: #36aa7b;
   text-transform: uppercase;
   text-decoration: none;
   position: relative;
 }
-a:after {    
+nav a:after, footer a:after {    
   background: none repeat scroll 0 0 transparent;
   bottom: 0;
   content: "";
@@ -722,7 +712,7 @@ a:after {
   transition: width 0.3s ease 0s, left 0.3s ease 0s;
   width: 0;
 }
-a:hover:after { 
+nav a:hover:after, footer a:hover:after { 
   width: 100%; 
   left: 0; 
 }
