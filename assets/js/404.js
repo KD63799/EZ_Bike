@@ -5,3 +5,15 @@ window.onload = function() {
     }
   };
   
+
+ const colors = ['#000000', 'rgb(0, 153, 97)', '#000000', 'rgb(0, 153, 97)'];
+ let currentIndex = 0;
+ const errorCode = document.getElementById('error-code');
+
+
+ function changeColor() {
+   errorCode.style.color = colors[currentIndex];
+   currentIndex = (currentIndex + 1) % colors.length;
+ }
+
+ setInterval(changeColor, 2000);
