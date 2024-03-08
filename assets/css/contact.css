@@ -10,7 +10,6 @@ h1 {
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    padding: 7rem 0px;
 }
 
 /* ANCHOR style form */
@@ -92,16 +91,6 @@ h1 {
     position: relative;
   }
   
-  .success-checked::after {
-    content: "\F26E";
-    font-family: 'bootstrap-icons';
-    color: green;
-    font-size: 1.5em;
-    position: absolute;
-    top: 50%;
-    right: 1rem;
-    transform: translateY(-50%);
-  }
 
 /* ANCHOR media query */
 
@@ -121,9 +110,6 @@ h1 {
         font-size: 24px;
     }
 
-    section {
-        padding: 2rem 0;
-    }
     #popUp {
         padding-top: 80%;
     }

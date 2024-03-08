@@ -82,7 +82,7 @@ async function createMap(combineData) {
 
 input.addEventListener("input",function filter(event){
   const combineData = JSON.parse(localStorage.getItem("data"))
-  let result = event.target.value
+  let result = event.target.value.toLowerCase()
   // filtrage des stations
   const tabfiltred = combineData.filter(station => station.name.toLowerCase().includes(result))
   // reset de la carte
