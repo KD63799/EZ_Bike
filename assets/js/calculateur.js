@@ -11,7 +11,8 @@ btn.addEventListener("click", function(event) {
     let result = ((dist * day) * conso) * 4
     result = result.toFixed(2)
     console.log(result);
-    popUp_txt.innerHTML = `Les émissions de CO2 pour les trajets domicile / travail en voiture sont de <strong>${result}</strong> kg par mois`
+    popUp_txt.innerHTML = `
+    Les émissions de CO2 pour les trajets domicile / travail en voiture sont de <strong>${result}</strong> kg par mois`
 })
 
 

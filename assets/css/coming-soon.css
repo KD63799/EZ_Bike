@@ -51,7 +51,7 @@ img {
 #message {
   font-weight: bolder;
   font-size: larger;
-  color: #019961;
+  color: #b65c25;
 }
 
 @media screen and (max-width: 768px) {
