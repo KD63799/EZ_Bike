@@ -11,9 +11,9 @@ function updateCountdown() {
   var seconds = Math.floor((difference % (1000 * 60)) / 1000);
 
   document.getElementById('days').innerHTML = days + ' jours';
-  document.getElementById('hours').innerHTML = hours + ' heure';
-  document.getElementById('minutes').innerHTML = minutes + ' minute';
-  document.getElementById('seconds').innerHTML = seconds + ' seconde';
+  document.getElementById('hours').innerHTML = hours + ' heures';
+  document.getElementById('minutes').innerHTML = minutes + ' minutes';
+  document.getElementById('seconds').innerHTML = seconds + ' secondes';
 
   if (difference < 0) {
     document.getElementById('days').innerHTML = "0d";

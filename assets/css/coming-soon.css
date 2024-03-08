@@ -53,7 +53,7 @@ img {
 #message {
   font-weight: bolder;
   font-size: larger;
-  color: #019961;
+  color: #b65c25;
 }
 
 @media screen and (max-width: 768px) {
@@ -63,9 +63,9 @@ img {
     background-position: center;
   }
   .rectangle {
-    width: 50px;
-    height: 50px;
-    font-size: 18px;
+    width: 73px;
+    height: 60px;
+    font-size: 16px;
     margin: 3px;
   }
 
