@@ -1,5 +1,6 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.125rem;
   margin: 0;
   min-height: 80vh;
 }
@@ -22,10 +23,15 @@ img {
   align-items: center;
 }
 
+.leaf {
+  position: absolute;
+  z-index: -1;
+}
+
 .rectangle {
   width: 100px;
   height: 90px;
-  background-color: green;
+  background-color: #019961;
   padding: 10px;
   margin: 10px;
   font-size: 24px;
@@ -34,18 +40,18 @@ img {
   justify-content: center;
   align-items: center;
   color: whitesmoke;
+  border-radius: 20px;
 }
 .countdown-container {
   display: flex;
   justify-content: center;
   gap: 10px;
 }
-h1 {
-  color: red;
-}
-p {
+
+#message {
   font-weight: bolder;
   font-size: larger;
+  color: #019961;
 }
 
 @media screen and (max-width: 768px) {
@@ -64,6 +70,7 @@ p {
   .designBack {
     display: none;
   }
+  
   @media (min-width: 769px) {
     .rectangle {
       width: 100px; 
@@ -71,5 +78,76 @@ p {
       margin: 10px; 
       font-size: 24px; 
     }
+
   }
+}
+
+/* *ANCHOR - Bike animation */
+
+.centerBike {
+position: absolute;
+top: 50%;
+left: 50%;
+margin-top: 26px;
+margin-left: -12px;
+}
+
+.center {
+position: absolute;
+top: 50%;
+left: 50%;
+margin-top: -50px;
+margin-left: -50px;
+}
+
+#loop {
+height: 110px;
+width: 110px;
+border: #019961 solid 4px;
+border-radius: 200px;
+}
+
+#loop:before {
+  background: linear-gradient(to left, rgba(1, 153, 97, 0) 0%, rgba(1, 153, 97, 1) 30%, rgba(1, 153, 97, 1) 70%, rgba(1, 153, 97, 0) 100%);content: "";
+display: block;
+height: 4px;
+left: -100px;
+position: relative;
+top: 105px;
+width: 300px;
+}
+
+#bike-wrapper {
+height: 108px;
+width: 108px;
+animation: drive 3s linear infinite;
+}
+
+#bike {
+height: 24px;
+width: 25px;
+background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/133687/motorbike.png");
+color: #019961;
+}
+
+@keyframes drive {
+0% {
+  margin-left: -364px;
+  opacity: 0;
+}
+33.33% {
+  transform: rotate(0deg);
+  margin-left: -50px;
+  opacity: 1;
+}
+66.66% {
+  transform: rotate(-360deg);
+  margin-left: -50px;
+  opacity: 1;
+}
+100% {
+  margin-left: 264px;
+  transform: rotate(-360deg);
+  opacity: 0;
+}
 }
