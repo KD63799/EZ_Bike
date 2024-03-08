@@ -4,9 +4,8 @@
   console.log("displayHeader");
   const header = document.createElement("header");
   header.innerHTML = `
-    <header>
     <div class="nav-link">
-      <a>
+      <a href="/index.html">
         <img id="logo" src="assets/jpg/ez-bike_logo.jpg" alt="ez-bike_logo" />
       </a>
       <nav class="side-nav">
@@ -22,7 +21,6 @@
       <div class="btn-menu__bar btn-menu__bar--bar2"></div>
       <div class="btn-menu__bar btn-menu__bar--bar3"></div>
     </div>
-    </header>
     `;
   document.body.prepend(header);
 })()
